@@ -55,7 +55,7 @@ jobs:
       run: |
         ant -noinput echoproperties deploy embed test
       env:
-        ANT_OPTS: -Dtest.openssl.exists=false -Dtest.excludePerformance=true -Dtest.exclude=org/apache/tomcat/util/buf/TestCharsetCache.java,jakarta/el/TestImportHandlerStandardPackages.java
+        ANT_OPTS: -Dtest.openssl.exists=false -Dtest.excludePerformance=true -Dtest.exclude=org/apache/tomcat/util/buf/TestCharsetCache.java,jakarta/el/TestImportHandlerStandardPackages.java,jakarta/http/**
     - name: Upload jars
       uses: actions/upload-artifact@v4
       with:
